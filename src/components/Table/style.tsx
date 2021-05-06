@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type Props = {
+  styled?: boolean;
+};
+
 export const Container = styled.div`
   padding: 1rem;
   display: flex;
@@ -11,7 +15,9 @@ export const Table = styled.table`
   border-collapse: collapse;
 `;
 
-export const StyledRow = styled.tr``;
+export const StyledRow = styled.tr<Props>`
+  background: ${({ styled }) => (styled ? '#faf2da' : 'white')};
+`;
 
 export const Header = styled.th`
   border: 2px solid black;

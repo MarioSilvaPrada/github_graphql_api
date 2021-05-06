@@ -20,11 +20,11 @@ const Table: FC<IProps> = ({ data, error }) => {
               <S.Header>🍴 Forks</S.Header>
             </S.StyledRow>
           </thead>
-          {data.edges.map((repo) => {
+          {data.edges.map((repo, i) => {
             const { name, stargazers, forks, url } = repo.node;
             return (
               <tbody key={name}>
-                <S.StyledRow>
+                <S.StyledRow styled={i % 2 === 0}>
                   <S.Data>
                     <S.StyledLink href={url} target='blank'>
                       {name}
