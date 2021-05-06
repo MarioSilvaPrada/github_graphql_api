@@ -14,18 +14,20 @@ export const Table = styled.table`
 export const StyledRow = styled.tr``;
 
 export const Header = styled.th`
-  border: 1px solid black;
-  padding: 0.5rem;
+  border: 2px solid black;
+  padding: 0.9rem;
+  font-size: ${({ theme }) => theme.fontSize.L};
 `;
 
 export const Data = styled.td`
-  border: 1px solid black;
-  padding: 0.5rem;
+  border: 2px solid black;
   text-align: center;
+  padding: 0.9rem;
+  font-size: ${({ theme }) => theme.fontSize.M};
 `;
 
 export const StyledLink = styled.a`
-  color: orange;
+  color: ${({ theme }) => theme.colors.main};
   cursor: pointer;
   text-decoration: none;
 `;

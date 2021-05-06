@@ -1,10 +1,12 @@
 const theme = {
-  red: 'red',
-  green: 'green',
+  colors: {
+    main: '#f7a440',
+  },
+  margin: '1rem',
   fontSize: {
-    small: '9px',
-    medium: '17px',
-    big: '40px',
+    S: '.9rem',
+    M: '1.2rem',
+    L: '1.5rem',
   },
 };
 

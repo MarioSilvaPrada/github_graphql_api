@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 0.5rem ${({ theme }) => theme.margin};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: orange;
+  background: ${({ theme }) => theme.colors.main};
 `;
 
 export const RightInfo = styled.div`
@@ -20,7 +20,8 @@ export const ProfilePic = styled.img`
 `;
 
 export const StyledName = styled.p`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.fontSize.L};
+  font-weight: bold;
 `;
 
 export const Link = styled.a`
@@ -29,4 +30,10 @@ export const Link = styled.a`
   color: black;
   border-bottom: 1px solid black;
   padding-bottom: 0.2rem;
+  font-size: ${({ theme }) => theme.fontSize.S};
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
 `;

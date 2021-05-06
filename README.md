@@ -1,7 +1,7 @@
 # Getting Started with Github GraphQl Api
 
 1. Clone project
-2. On your terminal run `yarn intall` | `npm install`
+2. On your terminal run `yarn install` or `npm install`
 3. Create a `.env` file on project root and enter:
 
 ```

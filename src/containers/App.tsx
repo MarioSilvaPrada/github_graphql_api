@@ -14,8 +14,6 @@ const App: FC = () => {
   );
   const { loading, error, data } = useQuery(TOP_REPOS);
 
-  console.log(loading, error, data);
-
   if (userLoading) return <h1>Loading</h1>;
   if (userError) return <h1>Error {userError.message}</h1>;
 
