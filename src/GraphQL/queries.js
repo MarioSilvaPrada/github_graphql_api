@@ -6,6 +6,7 @@ export const USERS_QUERY = gql`
       login
       name
       avatarUrl
+      url
     }
   }
 `;

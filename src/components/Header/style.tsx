@@ -22,3 +22,11 @@ export const ProfilePic = styled.img`
 export const StyledName = styled.p`
   font-size: 1.6rem;
 `;
+
+export const Link = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2rem;
+`;

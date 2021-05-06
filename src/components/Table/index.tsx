@@ -20,15 +20,22 @@ const Table: FC<IProps> = ({ data, error }) => {
               <S.Header>🍴 Forks</S.Header>
             </S.StyledRow>
           </thead>
-          {data.edges.map((repo) => (
-            <tbody key={repo.node.name}>
-              <S.StyledRow>
-                <S.Data>{repo.node.name}</S.Data>
-                <S.Data>{repo.node.stargazers.totalCount}</S.Data>
-                <S.Data>{repo.node.forks.totalCount}</S.Data>
-              </S.StyledRow>
-            </tbody>
-          ))}
+          {data.edges.map((repo) => {
+            const { name, stargazers, forks, url } = repo.node;
+            return (
+              <tbody key={name}>
+                <S.StyledRow>
+                  <S.Data>
+                    <S.StyledLink href={url} target='blank'>
+                      {name}
+                    </S.StyledLink>
+                  </S.Data>
+                  <S.Data>{stargazers.totalCount.toLocaleString()}</S.Data>
+                  <S.Data>{forks.totalCount.toLocaleString()}</S.Data>
+                </S.StyledRow>
+              </tbody>
+            );
+          })}
         </S.Table>
       ) : (
         <h1>Something went wrong!</h1>

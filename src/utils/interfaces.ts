@@ -8,6 +8,14 @@ export interface IRepoData {
       forks: {
         totalCount: number;
       };
+      url: string;
     };
   }>;
+}
+
+export interface IUser {
+  login: string;
+  avatarUrl: string;
+  name: string;
+  url: string;
 }

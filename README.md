@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Getting Started with Github GraphQl Api
+
+- On your terminal run yarn install | npm install
+- Create a `.env` file on project root and enter:
+
+```
+    REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=<YOUR GITHUB TOKEN GOES HERE>
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
