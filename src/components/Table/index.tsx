@@ -13,17 +13,21 @@ const Table: FC<IProps> = ({ data, error }) => {
     <S.Container>
       {!error ? (
         <S.Table>
-          <S.StyledRow>
-            <S.Header>Name</S.Header>
-            <S.Header>⭐ Stars</S.Header>
-            <S.Header>🍴 Forks</S.Header>
-          </S.StyledRow>
-          {data.edges.map((repo) => (
-            <S.StyledRow key={repo.node.name}>
-              <S.Data>{repo.node.name}</S.Data>
-              <S.Data>{repo.node.stargazers.totalCount}</S.Data>
-              <S.Data>{repo.node.forks.totalCount}</S.Data>
+          <thead>
+            <S.StyledRow>
+              <S.Header>Name</S.Header>
+              <S.Header>⭐ Stars</S.Header>
+              <S.Header>🍴 Forks</S.Header>
             </S.StyledRow>
+          </thead>
+          {data.edges.map((repo) => (
+            <tbody key={repo.node.name}>
+              <S.StyledRow>
+                <S.Data>{repo.node.name}</S.Data>
+                <S.Data>{repo.node.stargazers.totalCount}</S.Data>
+                <S.Data>{repo.node.forks.totalCount}</S.Data>
+              </S.StyledRow>
+            </tbody>
           ))}
         </S.Table>
       ) : (
