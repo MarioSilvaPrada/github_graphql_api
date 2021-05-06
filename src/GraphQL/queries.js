@@ -16,7 +16,7 @@ export const TOP_REPOS = gql`
     search(
       query: "language:JavaScript stars:>10000"
       type: REPOSITORY
-      first: 10
+      first: 15
     ) {
       repositoryCount
       edges {
