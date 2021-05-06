@@ -21,6 +21,7 @@ export const TOP_REPOS = gql`
       edges {
         node {
           ... on Repository {
+            url
             name
             descriptionHTML
             stargazers {
